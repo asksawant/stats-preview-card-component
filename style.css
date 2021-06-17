@@ -1,0 +1,219 @@
+:root{
+    --dark-blue: hsl(233, 47%, 7%);
+    --desat-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --trans-white1: hsla(0, 0%, 100%, 0.75);
+    --trans-white2: hsla(0, 0%, 100%, 0.6);
+    --ff-inter:"Inter",san-serif;
+    --ff-lexed:"Lexend Deca", san-serif
+}
+
+*, *::before, *::after{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size:16px;
+}
+
+body{
+    background: var(--dark-blue);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+main{
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    padding: 3rem 1.5em;
+    min-height: calc(100vh - 90px);
+}
+
+.card{
+    background-color: var(--desat-blue);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    border-radius: 0.5em;
+    max-width: 1100px;
+    min-height: 445px;
+    width: 100%;
+}
+
+.hero{
+    background: var(--soft-violet);
+    border-radius: 0 0.5em 0.5em 0;
+    position: relative;
+    width: 49.3%;
+}
+
+.hero::after{
+    content: '';
+    background: url("./images/image-header-desktop.jpg") no-repeat center center;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    filter: contrast(90%) brightness(102%) opacity(0.8);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    padding: 4.375em;
+    width: 51.7%;
+}
+
+.info h1{
+    font-size: 2.25rem;
+    line-height: 3rem;
+    color: var(--white);
+    font-family: var(--ff-inter);
+    margin-top: 0;
+}
+
+.info h1 span{
+    font-size: 2.25rem;
+    line-height: 3rem;
+    color: var(--soft-violet);
+}
+
+.info p{
+    color: var(--trans-white2);
+    font-family: var(--ff-lexed);
+    font-size: 1rem;
+    line-height: 1.625rem;
+    word-spacing: -0.0625rem;
+    margin: 0;
+    padding-bottom: 2em;
+    width: 90%;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    width: 97%;
+}
+
+.stats_card{
+    color: var(--trans-white1);
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    font-family: var(--ff-lexed);
+    font-size: 0.75rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+}
+
+.stats_card span{
+    color: var(--white);
+    font-family: var(--ff-inter);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding-bottom: 0.25em;
+}
+
+.stats_card:first-child span{
+    text-transform: lowercase;
+}
+
+footer{
+    font-size: 11px;
+    font-family: var(--ff-lexed);
+    
+}
+.attribution { 
+    font-size: 11px; 
+    font-family: var(--ff-lexed);
+    text-align: center;
+    color: var(--white);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+@media only screen and (max-width: 875px){
+    body{
+        margin: 0 auto;
+    }
+
+    main{
+        align-items: flex-start;
+        padding: 5.5em 1.5em;
+    }
+
+    .card{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .card > div{
+        width: 100%;
+    }
+
+    .hero{
+        border-radius: 0.5rem 0.5rem 0 0;
+        min-height: 245px;
+    }
+
+    .hero::after{
+        content: '';
+        background-position: top center;
+        background: url("./images/image-header-mobile.jpg") no-repeat center center;
+        background-size: cover;
+        mix-blend-mode: multiply;
+        
+    }
+
+    .info{
+        text-align: center;
+        padding: 2.25rem ;
+    }
+
+    .info h1{
+        font-size: 1.75rem;
+        line-height: 2.1rem;
+    }
+
+    .info h1 span{
+        font-size: 1.75rem;
+        line-height: 2.1rem
+    }
+
+    .info p{
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+
+    .stats{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .stats_card{
+        padding-bottom: 2rem;
+    }
+
+    .stats_card:last-child{
+        padding-bottom: 0;
+    }
+
+    footer{
+        margin: 0 auto;
+        padding: 0.5em 0.25em
+    }
+}
