@@ -55,7 +55,7 @@ main{
 
 .hero::after{
     content: '';
-    background: url(./images/image-header-desktop.jpg) no-repeat center center;
+    background: url(stats-preview-card-component/images/image-header-desktop.jpg) no-repeat center center;
     background-size: cover;
     mix-blend-mode: multiply;
     filter: contrast(90%) brightness(102%) opacity(0.8);
