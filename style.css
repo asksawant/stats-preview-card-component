@@ -55,7 +55,7 @@ main{
 
 .hero::after{
     content: '';
-    background: url(stats-preview-card-component/images/image-header-desktop.jpg) no-repeat center center;
+    background: url(../images/image-header-desktop.jpg) no-repeat center center;
     background-size: cover;
     mix-blend-mode: multiply;
     filter: contrast(90%) brightness(102%) opacity(0.8);
@@ -173,7 +173,7 @@ footer{
     .hero::after{
         content: '';
         background-position: top center;
-        background: url(images/image-header-mobile.jpg) no-repeat center center;
+        background: url(../images/image-header-mobile.jpg) no-repeat center center;
         background-size: cover;
         mix-blend-mode: multiply;
         
