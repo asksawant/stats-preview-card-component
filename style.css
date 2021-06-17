@@ -173,7 +173,7 @@ footer{
     .hero::after{
         content: '';
         background-position: top center;
-        background: url(./images/image-header-mobile.jpg) no-repeat center center;
+        background: url(images/image-header-mobile.jpg) no-repeat center center;
         background-size: cover;
         mix-blend-mode: multiply;
         
