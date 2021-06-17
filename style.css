@@ -48,7 +48,7 @@ main{
 }
 
 .hero::after{
-    content: '';
+    content: "";
     background: url(../images/image-header-desktop.jpg) no-repeat center center;
     background-size: cover;
     mix-blend-mode: multiply;
@@ -165,7 +165,7 @@ footer{
     }
 
     .hero::after{
-        content: '';
+        content: "";
         background-position: top center;
         background: url(../images/image-header-mobile.jpg) no-repeat center center;
         background-size: cover;
